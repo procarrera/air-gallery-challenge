@@ -14,7 +14,8 @@ export default function TopBar() {
                 <SlidersHorizontal />
             </div>
             <div className="flex flex-row gap-2 min-w-fit">
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">Save to...</button>
+                <button className="bg-slate-950 hover:bg-slate-600 text-white font-bold py-2 px-4 rounded-md">Save changes</button>
+                <button className="text-gray-500 hover:text-gray-600 border font-bold py-2 px-4 rounded-md">Cancel</button>
             </div>
         </div>
     )
