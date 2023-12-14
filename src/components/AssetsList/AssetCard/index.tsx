@@ -71,10 +71,10 @@ export default function AssetCard({ data }: AssetItemProps) {
     return (
         <Draggable>
             <li className="max-w-xs w-40 h-40 rounded overflow-hidden shadow-lg relative">
-                {data.type === 'image' ? (
+                {data.type === 'photo' ? (
                     <img src={data.assets.image} alt={data.displayName} className="w-full h-full object-cover" />
                 ) : (
-                    <video src={data.assets.video} controls={false} className="w-full h-full object-cover" />
+                    <video autoPlay muted loop src={data.assets.previewVideo} controls={false} className="w-full h-full object-cover" />
                 )}
             </li>
         </Draggable>

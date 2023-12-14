@@ -2,10 +2,6 @@ import { useEffect, useState } from "react";
 import BoardCard from "./BoardCard";
 import { SubBoardItem } from "./BoardCard";
 
-interface BoardListProps {
-    data: SubBoardItem[];
-}
-
 export default function BoardList() {
     const [data, setData] = useState<any>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
