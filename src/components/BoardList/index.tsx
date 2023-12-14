@@ -28,7 +28,6 @@ export default function BoardList() {
                     }
                 );
                 const responseData = await response.json();
-                console.log(responseData)
                 setData(responseData.data);
                 setIsLoading(false);
             } catch (error) {
