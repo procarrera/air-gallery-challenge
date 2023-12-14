@@ -41,7 +41,7 @@ export default function BoardItem({ board }: BoardItemProps) {
                     <img className="w-full h-full object-cover" src={board.thumbnails[0]} alt="Sunset in the mountains" />
                 )}
                 {!board.thumbnails && (
-                    <div className="w-full h-full bg-gray-300"></div>
+                    <div className="w-full h-full bg-slate-200"></div>
                 )}
             </div>
             <h3 className="text-white absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-center">{board.title}</h3>
