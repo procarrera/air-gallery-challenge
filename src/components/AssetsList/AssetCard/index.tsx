@@ -69,7 +69,7 @@ interface AssetItemProps {
 export default function AssetCard({ data }: AssetItemProps) {
     return (
             <div
-                className="w-fit h-40 rounded overflow-hidden shadow-lg min-w-40"
+                className="w-fit h-40 rounded overflow-hidden shadow-lg min-w-40 hover:border"
                 style={{ aspectRatio: `${data.width}/${data.height}` }}
             >
                 {data.type === 'photo' ? (
