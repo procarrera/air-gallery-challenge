@@ -1,3 +1,4 @@
+import { Draggable } from 'react-drag-reorder';
 import { useEffect, useState } from "react";
 import AssetCard from "./AssetCard";
 
@@ -57,11 +58,13 @@ export default function BoardList() {
     return (
         <div className="mt-16 flex flex-col gap-8 items-start justify-start">
             <h2 className="text-md uppercase">Assets ({data.length})</h2>
-            <ul className="flex flex-wrap gap-4" style={{ maxWidth: '100%' }}>
-                {data.map((asset: any) => (
-                    <AssetCard key={asset.id} data={asset} />
-                ))}
-            </ul>
+            <div className="flex flex-wrap gap-4 relative" style={{ maxWidth: '100%' }}>
+                <Draggable>
+                    {data.map((asset: any) => (
+                        <AssetCard key={asset.id} data={asset} />
+                    ))}
+                </Draggable>
+            </div>
         </div>
     );
 }

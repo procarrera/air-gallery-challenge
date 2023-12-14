@@ -1,6 +1,9 @@
 import './App.css'
-import AssetsList from './components/AssetsList';
 
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+
+import AssetsList from './components/AssetsList';
 import BoardHeader from './components/BoardHeader';
 import BoardList from './components/BoardList';
 
