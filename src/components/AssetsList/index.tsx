@@ -55,11 +55,19 @@ export default function BoardList() {
         return <div>Loading...</div>;
     }
 
+    function handleNewOrder(currentPos: number, newPos: number) {
+        console.log(currentPos, newPos)
+    }
+
+    async function saveNewOrder(){
+
+    }
+
     return (
         <div className="mt-16 flex flex-col gap-8 items-start justify-start">
             <h2 className="text-xs font-bold  text-gray-500 uppercase">Assets ({data.length})</h2>
             <div className="flex flex-wrap gap-4 relative w-full">
-                <Draggable>
+                <Draggable onPosChange={handleNewOrder}>
                     {data.map((asset: any) => (
                         <AssetCard key={asset.id} data={asset} />
                     ))}
