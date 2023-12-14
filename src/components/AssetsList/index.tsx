@@ -57,8 +57,8 @@ export default function BoardList() {
 
     return (
         <div className="mt-16 flex flex-col gap-8 items-start justify-start">
-            <h2 className="text-md uppercase">Assets ({data.length})</h2>
-            <div className="flex flex-wrap gap-4 relative" style={{ maxWidth: '100%' }}>
+            <h2 className="text-xs font-bold  text-gray-500 uppercase">Assets ({data.length})</h2>
+            <div className="flex flex-wrap gap-4 relative w-full">
                 <Draggable>
                     {data.map((asset: any) => (
                         <AssetCard key={asset.id} data={asset} />

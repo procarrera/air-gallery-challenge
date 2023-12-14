@@ -68,11 +68,14 @@ interface AssetItemProps {
 }
 export default function AssetCard({ data }: AssetItemProps) {
     return (
-            <div className="max-w-xs w-40 h-40 rounded overflow-hidden shadow-lg relative">
+            <div
+                className="w-fit h-40 rounded overflow-hidden shadow-lg min-w-40"
+                style={{ aspectRatio: `${data.width}/${data.height}` }}
+            >
                 {data.type === 'photo' ? (
                     <img src={data.assets.image} alt={data.displayName} className="w-full h-full object-cover" />
                 ) : (
-                    <video autoPlay muted src={data.assets.previewVideo} controls={false} className="w-full h-full object-cover" />
+                    <video autoPlay playsInline loop muted src={data.assets.previewVideo} controls={false} className="w-full h-full object-cover" />
                 )}
             </div>
     );

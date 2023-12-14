@@ -41,9 +41,9 @@ export default function BoardList() {
     }
 
     return (
-        <div className="mt-16 flex flex-col gap-8 items-start justify-start">
-            <h2 className="text-md uppercase">Boards ({data.length})</h2>
-            <ul className="flex gap-4">
+        <div className="mt-16 flex flex-col gap-8 items-start justify-start w-full">
+           <h2 className="text-xs font-bold  text-gray-500 uppercase">Boards ({data.length})</h2>
+            <ul className="flex gap-4 flex-row flex-wrap w-full">
                 {data.map((board: SubBoardItem) => (
                     <BoardCard key={board.id} board={board} />
                 ))}

@@ -9,7 +9,7 @@ function App() {
   // Use the 'data' variable in your component as needed
 
   return (
-    <div className='flex flex-col gap-4 items-start justify-start align-top'>
+    <div className='flex flex-col gap-2 items-start justify-start align-top'>
       <BoardHeader />
       <BoardList />
       <AssetsList />
