@@ -7,12 +7,11 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 export default function BoardList() {
     const [data, setData] = useState<any>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [hasMore, setHasMore] = useState<boolean>(true);
+    const [hasMore, setHasMore] = useState<boolean>(false);
     const [nextCursor, setNextCursor] = useState<string>('')
     const [totalClips, setTotalClips] = useState<number>(0)
 
     const fetchData = async () => {
-        console.log('fetching ASSETS data = ', hasMore , "Next Cursor: ", nextCursor)
         try {
             const response = await fetch(
                 `https://api.air.inc/shorturl/bDkBvnzpB/clips/search`,
@@ -74,11 +73,11 @@ export default function BoardList() {
             <h2 className="text-xs font-bold  text-gray-500 uppercase">Assets ({totalClips})</h2>
             <div className="flex flex-wrap gap-4 relative w-full">
                 <InfiniteScroll
-                className='flex flex-wrap gap-4 relative w-full'
+                    className='flex flex-wrap gap-4 relative w-full'
                     dataLength={data}
                     next={fetchData}
                     hasMore={hasMore}
-                    loader={<h4>Loading...</h4>}
+                    loader={<div className="w-full flex justify-center bg-slate-50 rounded-xl p-4">Loading...</div>}
                     endMessage={
                         <p style={{ textAlign: 'center' }}>
                             <b>Yay! You have seen it all</b>
